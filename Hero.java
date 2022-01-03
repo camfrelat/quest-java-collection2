@@ -1,4 +1,5 @@
-public class Hero {
+
+public class Hero  implements Comparable<Hero>{
 
     // attributs
     private String name;
@@ -8,6 +9,15 @@ public class Hero {
     public Hero(String name, int age) {
         this.name = name;
         this.age = age;
+    
+    }
+    
+    // Compare two heros based on their name and class them by alphabetical order
+    
+    @Override
+    public int compareTo(Hero hero) {
+    	
+    	return this.getName().compareTo(hero.getName());
     }
 
     // accesseurs (getters)
